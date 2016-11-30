@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/delete_from_context"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="删除拦截记录" />
+
+    <Button
+        android:id="@+id/remove_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="移除黑名单，设置该号码不被拦截" />
+
+    <Button
+        android:id="@+id/call"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="呼叫" />
+
+</LinearLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dragonmuou"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="10" />
+
+    <uses-permission android:name="android.permission.RECEIVE_SMS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CALL_PHONE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!-- 添加权限:接受系统开机广播 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:icon="@android:drawable/stat_sys_phone_call_on_hold"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".An_clientActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="Main_face" >
+        </activity>
+        <activity android:name="Add_person" >
+        </activity>
+        <activity android:name="RosterActivity" >
+        </activity>
+        <activity android:name="List_Activity" >
+        </activity>
+        <activity android:name="com.dragonmuou.Contacts_list" >
+        </activity>
+
+        <receiver android:name="com.reciever.MsnReciever" >
+            <intent-filter android:priority="1000" >
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" >
+                </action>
+                <action android:name="com.reciever.MsnService" >
+                </action>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.reciever.PhoneReciever" >
+            <intent-filter android:priority="1000" >
+                <action android:name="android.intent.action.PHONE_STATE" >
+                </action>
+            </intent-filter>
+        </receiver>
+
+        <activity android:name="ShowmessageActivity" >
+        </activity>
+
+        <service android:name="com.reciever.PhoneService" >
+            <intent-filter>
+                <action android:name="com.reciever.PhoneReciever" >
+                </action>
+            </intent-filter>
+        </service>
+        <service android:name="com.reciever.ChildService" >
+            <intent-filter>
+                <action android:name="com.reciever.ChildService" >
+                </action>
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent" android:weightSum="1" android:orientation="horizontal">
+    <LinearLayout android:id="@+id/linearLayout1" android:layout_width="match_parent" android:layout_height="39dp">
+        <TextView android:id="@+id/time_textView" android:layout_height="wrap_content" android:layout_width="162dp"></TextView>
+        <TextView android:id="@+id/num_textView" android:layout_height="wrap_content" android:layout_width="match_parent"></TextView>
+    </LinearLayout>
+    
+</LinearLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/num"
+        android:layout_alignBottom="@+id/num"
+        android:layout_toLeftOf="@+id/link"
+        android:layout_toRightOf="@+id/num"
+        android:imeOptions="actionNext"
+        android:inputType="phone"
+        android:maxLength="18"
+        android:maxLines="1" >
+    </EditText>
+
+    <TextView
+        android:id="@+id/num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="39dp"
+        android:paddingLeft="20px"
+        android:text="@string/num" >
+    </TextView>
+
+    <Button
+        android:id="@+id/link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/phone"
+        android:layout_alignBottom="@+id/phone"
+        android:layout_alignParentRight="true"
+        android:paddingRight="20px"
+        android:text="@string/link" >
+    </Button>
+
+    <TextView
+        android:id="@+id/type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/link"
+        android:layout_marginTop="71dp"
+        android:paddingLeft="20px"
+        android:text="@string/type" >
+    </TextView>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/checkBox_msn"
+        android:layout_alignRight="@+id/checkBox_phone"
+        android:layout_below="@+id/checkBox_msn"
+        android:layout_marginTop="80dp"
+        android:text="@string/ok" >
+
+    </Button>
+
+    <CheckBox
+        android:id="@+id/checkBox_msn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/type"
+        android:layout_alignBottom="@+id/type"
+        android:layout_alignLeft="@+id/phone"
+        android:layout_marginLeft="16dp"
+        android:text="@string/msn" >
+    </CheckBox>
+
+    <CheckBox
+        android:id="@+id/checkBox_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/checkBox_msn"
+        android:layout_alignBottom="@+id/checkBox_msn"
+        android:layout_toLeftOf="@+id/link"
+        android:text="@string/phone" >
+    </CheckBox>
+        
+
+</RelativeLayout>

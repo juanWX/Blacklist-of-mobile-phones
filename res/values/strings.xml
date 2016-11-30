@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, An_clientActivity!</string>
+    <string name="app_name">电话黑名单</string>
+    <string name="head">黑名单</string>
+    <color name="head_color">#D2DEB9</color>
+    <string name="num">电话号码：</string>
+    <string name="link">名片夹</string>
+    <string name="type">拦截方式：</string>
+    <string name="msn">短信</string>
+    <string name="phone">电话</string>
+    <string name="ok">添加黑名单</string>
+    <color name="white">#FFFFFF</color>
+    <string name="chang_ok">完成修改</string>
+</resources>
